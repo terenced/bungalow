@@ -8,6 +8,7 @@ authors = ["terenced"]
 python = "^3.7"
 django = "^2.2"
 djangorestframework = "^3.10"
+django-localflavor = "^2.2"
 
 [tool.poetry.dev-dependencies]
 

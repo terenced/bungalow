@@ -12,11 +12,31 @@ sqlparse = "*"
 
 [[package]]
 category = "main"
+description = "Country-specific Django helpers"
+name = "django-localflavor"
+optional = false
+python-versions = "*"
+version = "2.2"
+
+[package.dependencies]
+django = ">=1.11"
+python-stdnum = ">=1.0"
+
+[[package]]
+category = "main"
 description = "Web APIs for Django, made easy."
 name = "djangorestframework"
 optional = false
 python-versions = ">=3.5"
 version = "3.10.3"
+
+[[package]]
+category = "main"
+description = "Python module to handle standardized numbers and codes"
+name = "python-stdnum"
+optional = false
+python-versions = "*"
+version = "1.11"
 
 [[package]]
 category = "main"
@@ -35,11 +55,13 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.3.0"
 
 [metadata]
-content-hash = "398012a5954b4e4c870aeee8917abd2ab7956f925a9beee8986dc951098fc50d"
+content-hash = "2d36e2c5bda4bcf17e02c20d7d18c1f814a891ca3ed55069e94eeb96dc10b4e1"
 python-versions = "^3.7"
 
 [metadata.hashes]
 django = ["148a4a2d1a85b23883b0a4e99ab7718f518a83675e4485e44dc0c1d36988c5fa", "deb70aa038e59b58593673b15e9a711d1e5ccd941b5973b30750d5d026abfd56"]
+django-localflavor = ["628f382ac0b8ce401d4ba684031abd2548c24782df9fb0d5c7ad44c35a2bb095", "7a4fa03651e609c30f720e35fb9442cddefa1975646cf9d6765a2ba1ed139961"]
 djangorestframework = ["5488aed8f8df5ec1d70f04b2114abc52ae6729748a176c453313834a9ee179c8", "dc81cbf9775c6898a580f6f1f387c4777d12bd87abf0f5406018d32ccae71090"]
+python-stdnum = ["d5f0af1bee9ddd9a20b398b46ce062dbd4d41fcc9646940f2667256a44df3854", "f445ec32bf5246c90389204cabba465f494545371c29a83fa2d30e6c872a6763"]
 pytz = ["26c0b32e437e54a18161324a2fca3c4b9846b74a8dccddd843113109e1116b32", "c894d57500a4cd2d5c71114aaab77dbab5eabd9022308ce5ac9bb93a60a6f0c7"]
 sqlparse = ["40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177", "7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873"]

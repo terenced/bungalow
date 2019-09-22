@@ -1,9 +1,10 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from api.core.views import UserViewSet
+from api.core.views import UserViewSet, ListingViewSet
 
 router = routers.DefaultRouter()
+router.register(r'listings', ListingViewSet)
 router.register(r'users', UserViewSet)
 
 
