@@ -1,9 +1,8 @@
 from django.db import models
 from .common import TimeStampedModel
-
+from .listing import Listing
 
 SOURCE_TYPES = [("zillow", "Zillow"), ("internal", "Internal")]
-
 
 class Metadata(TimeStampedModel, models.Model):
     """Metadata for a listing. 
@@ -13,6 +12,7 @@ class Metadata(TimeStampedModel, models.Model):
     NOTE: Initially, we are only supporting Zillow, but I am trying to 
     future-proof this a bit.
     """
+    listing = models.ForeignKey(Listing, on_delete=models.CASCADE)
 
     # External ID is a string because other sources (in the future) might
     # not use integers

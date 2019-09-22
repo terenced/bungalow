@@ -25,12 +25,12 @@ class Listing(UUIDModel, TimeStampedModel, models.Model):
 
     area_unit = models.CharField(max_length=10, choices=AREA_UNITS, default="SqFt")
 
-    home_size = models.IntegerField()
+    home_size = models.IntegerField(blank=True)
 
     home_type = models.CharField(
         max_length=100, choices=HOME_TYPES, default="SingleFamily"
     )
-    property_size = models.IntegerField()
+    property_size = models.IntegerField(blank=True)
 
     price = models.DecimalField(max_digits=20, default=0.0, decimal_places=2)
 
@@ -44,3 +44,6 @@ class Listing(UUIDModel, TimeStampedModel, models.Model):
     class Meta:
         verbose_name_plural = "Listings"
         unique_together = [["address", "city", "state", "zipcode"]]
+
+    def __str__(self):
+        return f"{self.address}, {self.city}, {self.state}, {self.zipcode}"
