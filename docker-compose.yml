@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  app:
+    image: bungalow-app:latest
+    container_name: bungalow-app
+    build: .
+    tty: true
+    stdin_open: true
+    restart: always
+    working_dir: /app
+    expose:
+      - 8001
+    ports:
+    - 8001:8001
+    volumes:
+      - .:/app
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8001"]
+    stdin_open: true
+    tty: true
+  shell:
+    image: bungalow-app:latest
+    container_name: bungalow-shell
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: /bin/bash
+    stdin_open: true
+    tty: true
