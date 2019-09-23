@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from localflavor.us.models import USStateField, USZipCodeField
 
+
 from .common import TimeStampedModel, UUIDModel
 
 AREA_UNITS = [("SqFt", "Square Feet"), ("Mt", "Metric")]
